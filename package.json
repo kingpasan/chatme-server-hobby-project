@@ -1,0 +1,16 @@
+{
+  "name": "chatme-server",
+  "version": "1.0.0",
+  "description": "Chat ME server for education purpose, maybe release in future",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "application",
+    "server"
+  ],
+  "author": "Pasan Semage",
+  "license": "ISC"
+}
