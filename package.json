@@ -12,5 +12,8 @@
     "server"
   ],
   "author": "Pasan Semage",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.34"
+  }
 }
