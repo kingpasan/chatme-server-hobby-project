@@ -7,8 +7,8 @@ const server = createServer((req, res) => {
   res.end();
 });
 
-server.listen(3001, () => {
-  console.log("Server is listening on port: 3001");
+server.listen(8080, () => {
+  console.log("Server is listening on port: 8080");
 });
 
 const wsServer = new WebSocketServer({
@@ -16,7 +16,8 @@ const wsServer = new WebSocketServer({
   autoAcceptConnections: false,
 });
 
-const originIsAllowed = (origin) => {
+const originIsAllowed = (origin: string) => {
+  console.log(origin);
   return true;
 };
 
@@ -24,7 +25,7 @@ wsServer.on("request", (req) => {
   if (!originIsAllowed(req.origin)) {
     req.reject();
     console.log(
-      new Date() + " Connection from origin " + request.origin + " rejected."
+      new Date() + " Connection from origin " + req.origin + " rejected."
     );
     return;
   }
